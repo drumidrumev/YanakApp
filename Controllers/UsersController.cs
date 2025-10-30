@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 using YanakApp.Contracts;
-using YanakApp.DTOs.Product;
 using YanakApp.DTOs.User;
-using YanakApp.Models;
 
 namespace YanakApp.Controllers
 {
@@ -59,7 +51,7 @@ namespace YanakApp.Controllers
            return NoContent();
         }
 
-
+        // Not fully implemented yet
         [HttpPut("{userId}/products/{productId}")]
         public async Task<IActionResult> UserBuy(int userId,int productId)
         {

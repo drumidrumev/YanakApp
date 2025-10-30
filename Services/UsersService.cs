@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using Microsoft.EntityFrameworkCore;
 using YanakApp.Contracts;
 using YanakApp.DTOs.Product;
 using YanakApp.DTOs.User;
@@ -86,7 +84,7 @@ namespace YanakApp.Services
 
         }
 
-
+        // Not fully implemented yet
         public async Task UserBuyAsync(int userId,int productId)
         {
             var user = await _context.Users.FindAsync(userId) ?? throw new KeyNotFoundException("User not found");
