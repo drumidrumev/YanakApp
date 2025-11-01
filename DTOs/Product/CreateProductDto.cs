@@ -8,7 +8,7 @@ namespace YanakApp.DTOs.Product
         public string Name { get; set; }
         [MaxLength(150)]
         public string Description { get; set; }
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
     }
 
 

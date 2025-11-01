@@ -51,7 +51,7 @@ namespace YanakApp.Controllers
            return NoContent();
         }
 
-        // Not fully implemented yet
+        // PUT: api/Users/5/products/1
         [HttpPut("{userId}/products/{productId}")]
         public async Task<IActionResult> UserBuy(int userId,int productId)
         {

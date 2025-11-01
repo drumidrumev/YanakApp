@@ -4,7 +4,7 @@
     (
         string Name,
         string Description,
-        int UserId
+        int? UserId
     );
 
 

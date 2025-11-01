@@ -42,6 +42,8 @@ namespace YanakApp.Services
 
         public async Task<GetProductDto> CreateProductAsync(CreateProductDto createDto)
         {
+            var user = await _context.Users.FindAsync(createDto.UserId);
+
             var product = new Product
             {
                 Name = createDto.Name,
@@ -54,12 +56,14 @@ namespace YanakApp.Services
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
 
-            return new GetProductDto(
+            var result = new GetProductDto(
                 product.Id,
                 product.Name,
                 product.Description,
                 product.User!.LastName
                 );
+
+            return result;
 
 
         }

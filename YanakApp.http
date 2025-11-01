@@ -18,7 +18,7 @@ Content-Type: application/json
 
 ###
 
-@id=2
+@id=15
 DELETE {{YanakApp_HostAddress}}/api/users/{{id}}
 
 ###
@@ -48,8 +48,8 @@ POST {{YanakApp_HostAddress}}/api/products
 Content-Type: application/json
 
 {
-  "Name":"Car",
-  "Description":"Moving fast"
+  "Name":"Loki Toki",
+  "Description":"talking to others"
 
 }
 
@@ -76,8 +76,17 @@ GET {{YanakApp_HostAddress}}/api/products/{{id}}
 
 ###
 
-@userId=0
-@productId=0
+@userId=2
+@productId=17
 PUT {{YanakApp_HostAddress}}/api/users/{{userId}}/products/{{productId}}
+
+###
+
+PUT {{YanakApp_HostAddress}}/api/users/{{id}}
+Content-Type: application/json
+
+{
+  //UpdateUserDto
+}
 
 ###

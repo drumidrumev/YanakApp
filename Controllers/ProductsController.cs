@@ -79,7 +79,7 @@ namespace YanakApp.Controllers
         {
             var product = await _productsService.CreateProductAsync(createDto);
 
-            return CreatedAtAction("GetProduct", new { id = product.Id }, product);
+            return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
         }
 
         // DELETE: api/Products/5

@@ -84,7 +84,7 @@ namespace YanakApp.Services
 
         }
 
-        // Not fully implemented yet
+        
         public async Task UserBuyAsync(int userId,int productId)
         {
             var user = await _context.Users.FindAsync(userId) ?? throw new KeyNotFoundException("User not found");
